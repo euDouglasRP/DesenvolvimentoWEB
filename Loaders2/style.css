@@ -1,0 +1,37 @@
+body{
+    background: rgb(180,228,250);
+}
+.scene{
+    width: 600px; height: 60px;margin: 100px auto;
+}
+.circle{
+    width: 60px ;height: 60px;
+    border-top-right-radius: 60px;
+    float: left;transform-origin: bottom left;
+}
+
+.a,.c,.e,.g,.i{
+    animation: rotate1 1s ease-in-out alternate infinite;
+}
+.b,.d,.f,.h,.j{
+    animation: rotate2 1s ease-in-out alternate infinite;
+    transform:  rotate(90deg);
+}
+.a{ background: rgb(0, 152, 255);}
+.b{ background: rgb(100, 125, 255);}
+.c{ background: rgb(167, 98, 255);}
+.d{ background: rgb(237, 87, 255);}
+.e{ background: rgb(255, 81, 112);}
+.f{ background: rgb(255, 49, 148);}
+.h{ background: rgb(232, 83, 0);}
+.i{ background: rgb(232, 120, 0);}
+.g{ background: rgb(235, 47, 0);}
+.j{ background: rgb(232, 158, 0);}
+
+@keyframes rotate1{
+    100% { transform:  rotate(-360deg);}
+}
+@keyframes rotate2{
+    100%{ transform : rotate(450deg)}
+}
+    

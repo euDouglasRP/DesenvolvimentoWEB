@@ -1,0 +1,18 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #F3FFE2;
+}
+li a{
+    display: block;
+    color: #1695A3;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: "Arial";
+}
+li a:hover{
+    background-color: #225378;
+    color: #F3FFE2;
+}

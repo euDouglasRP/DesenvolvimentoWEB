@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Botoes</title>
+</head>
+
+<body>
+
+    <h1>Contador</h1>
+    <p>Valor: <span id="valor">0</span></p>
+    <button id="aumentar">Aumentar</button>
+    <button id="diminuir">Diminuir</button>
+
+    <script>
+
+        const valorElemento = document.getElementById("valor");
+        const aumentarBotao = document.getElementById("aumentar");
+        const diminuirBotao = document.getElementById("diminuir");
+
+        let contador = 0;
+
+        function aumentarContador() {
+            contador++;
+            valorElemento.textContent = contador;
+            if(contador >= 10){
+            contador = -1;
+        }
+        }
+
+        function diminuirContador() {
+            contador--;
+            valorElemento.textContent = contador;
+            if(contador <= 0){
+                contador = 11;
+            }
+        }
+
+        
+
+        aumentarBotao.addEventListener("click", aumentarContador);
+        diminuirBotao.addEventListener("click", diminuirContador)
+
+    </script>
+</body>
+
+</html>
