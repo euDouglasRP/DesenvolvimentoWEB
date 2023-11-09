@@ -22,3 +22,8 @@ body{
     padding: 50px;
     gap: 15px;
 }
+.botaoSubmit{
+    -webkit-box-shadow:0px 0px 133px 4px rgba(45,255,196,0.66);
+-moz-box-shadow: 0px 0px 133px 4px rgba(45,255,196,0.66);
+box-shadow: 0px 0px 133px 4px rgba(45,255,196,0.66);
+}

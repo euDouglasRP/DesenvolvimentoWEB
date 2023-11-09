@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://www.dbins.com.br/ferramentas/mascaras/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="BINS">
+    <title>Máscaras JavaScript</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./Máscaras JavaScript_files/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	
+  </head>
+  <body>
+	<h3 align="center">Máscaras para formulários - JavaScript</h3>
+	<table class="table">
+		<tbody><tr>
+			<td>Somente Números</td>
+			<td><input id="campo" name="campo" type="text"></td>
+		</tr>
+		<tr>
+			<td>Formatar Moeda</td>
+			<td><input id="campo2" name="campo" type="text"></td>
+		</tr>
+		<tr>
+			<td>Formatar Data</td>
+			<td><input id="campo3" name="campo" type="text" maxlength="10"></td>
+		</tr>
+		<tr>
+			<td>Formatar CPF</td>
+			<td><input id="campo4" name="campo" type="text" maxlength="14"></td>
+		</tr>
+		<tr>
+			<td>Formatar CNPJ</td>
+			<td><input id="campo5" name="campo" type="text" maxlength="18"></td>
+		</tr>
+		<tr>
+			<td>CEP</td>
+			<td><input id="campo6" name="campo" type="text" maxlength="9"></td>
+		</tr>
+		<tr>
+			<td>Telefone</td>
+			<td><input id="campo7" name="campo" type="text" maxlength="14"></td>
+		</tr>
+		<tr>
+			<td>Validar Telefone</td>
+			<td><input id="campo8" name="campo" type="text" maxlength="14"></td>
+		</tr>
+	</tbody></table>
+	<script type="text/javascript">
+	
+		const input = document.getElementById('campo');
+		input.addEventListener('keypress', somenteNumeros);
+		
+		const input2 = document.getElementById('campo2');
+		input2.addEventListener('keyup', formatarMoeda);
+		
+		const input3 = document.getElementById('campo3');
+		input3.addEventListener('keyup', formatarData);
+		
+		const input4 = document.getElementById('campo4');
+		input4.addEventListener('keyup', formatarCPF);
+		
+		const input5 = document.getElementById('campo5');
+		input5.addEventListener('keyup', formatarCNPJ);
+		
+		const input6 = document.getElementById('campo6');
+		input6.addEventListener('keyup', formatarCep);
+		
+		const input7 = document.getElementById('campo7');
+		input7.addEventListener('keyup', formatarTelefone);
+		
+		const input8 = document.getElementById('campo8');
+		input8.addEventListener('keyup', formatarTelefone);
+		
+		const input8B = document.getElementById('campo8');
+		input8B.addEventListener('blur', validarTelefone);
+
+		function somenteNumeros(e) {
+			
+			var charCode = (e.which) ? e.which : e.keyCode
+			if (charCode > 31 && (charCode < 48 || charCode > 57))
+			e.preventDefault();
+		}
+
+		function formatarMoeda(e) {
+			var v = e.target.value.replace(/\D/g,"");
+			v = (v/100).toFixed(2) + '';
+			v = v.replace(".", ",");
+			v = v.replace(/(\d)(\d{3})(\d{3}),/g, "$1.$2.$3,");
+			/*v = v.replace(/(\d)(\d{3}),/g, "$1.$2,");*/
+			e.target.value = v;
+		}
+
+		 
+		function formatarData(e){
+			var v=e.target.value.replace(/\D/g,"");
+			v=v.replace(/(\d{2})(\d)/,"$1/$2") 
+			v=v.replace(/(\d{2})(\d)/,"$1/$2") 
+			e.target.value = v;
+		}
+
+		function formatarCPF(e){
+			var v=e.target.value.replace(/\D/g,"");
+			v=v.replace(/(\d{3})(\d)/,"$1.$2");
+			v=v.replace(/(\d{3})(\d)/,"$1.$2");
+			v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+			e.target.value = v;
+		}
+
+		function formatarCNPJ(e){
+			var v= e.target.value.replace(/\D/g,"");
+			v=v.replace(/^(\d{2})(\d)/,"$1.$2");
+			v=v.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3");
+			v=v.replace(/\.(\d{3})(\d)/,".$1/$2");
+			v=v.replace(/(\d{4})(\d)/,"$1-$2");  
+			e.target.value = v;
+		}
+
+
+		function formatarCep(e){
+			var v= e.target.value.replace(/\D/g,"")                
+			v=v.replace(/^(\d{5})(\d)/,"$1-$2") 
+			e.target.value = v;
+		}
+
+
+		function formatarTelefone(e){
+			var v=e.target.value.replace(/\D/g,"");
+			v=v.replace(/^(\d\d)(\d)/g,"($1)$2"); 
+			v=v.replace(/(\d{5})(\d)/,"$1-$2");    
+			e.target.value = v;
+		}
+
+
+		function validarTelefone(e){
+
+			var texto = e.target.value;
+			var RegExp = /^\(\d{2}\)\d{5}-\d{4}/;
+
+			if (texto.match(RegExp) != null) {
+
+				alert('telefone válido');
+
+			} else {
+
+				alert('telefone inválido');
+
+				e.target.value = "";
+			}
+
+		} 
+	</script>
+
+
+
+</body></html>
