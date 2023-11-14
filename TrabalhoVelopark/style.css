@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+    color: white;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+li{
+    float: left;
+}
+li a{
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: "Arial";
+}
+.divHistoria{
+    display: flex;
+    align-items: baseline;
+}
+.divHistoriaTexto{
+
+}
+.divHistoriaImage{
+    
+}
+.imgLogo{
+    margin-left: 50px;
+}
+.imgHome{
+    margin: 80px;
+    margin-left: 275px;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #212121;
+}
+.p{
+    margin-left: 700px;
+}
