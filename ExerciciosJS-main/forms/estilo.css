@@ -1,0 +1,65 @@
+body{
+    font-family: 'Rancho', cursive;
+    font-size: 32px;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ecc7d5;
+}
+
+.divForm{
+    overflow: hidden;
+    border-style: inherit;
+    border-radius: 50px;
+    box-shadow: 0 9px 20px rgb(217, 105, 146);
+    height:550px;
+    width:900px;
+    background-image: linear-gradient(#D96690, #BF457E);
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
+    margin:0;
+}
+
+#esq{
+    margin:0;
+    width:50%;
+    height:550px;
+    background-color: white;
+}
+
+#dir{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    padding-top: 70px;
+    padding-right:210px;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin:0;
+    height:500px;
+}
+#aimagem{
+    padding-top: 100px;
+    padding-left: 60px;
+    width: 300px;
+    height: 300px;
+}
+
+#botEnviar{
+    
+    border-radius: 25px;
+    width:100px;
+    height: 30px;
+    background-color: #ecc7d5;
+}
+input[type=text]{
+    border-radius: 20px;
+    height:20px;
+    padding-left: 10px;
+}
+

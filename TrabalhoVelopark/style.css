@@ -20,15 +20,15 @@ li a{
     font-family: "Arial";
 }
 .divHistoria{
+    margin: 190px;
+    
     display: flex;
-    align-items: baseline;
 }
 .divHistoriaTexto{
+    margin-right: 30px;
+    font-size: 19px;
+}
 
-}
-.divHistoriaImage{
-    
-}
 .imgLogo{
     margin-left: 50px;
 }
@@ -47,6 +47,6 @@ li a{
     text-align: center;
     background-color: #212121;
 }
-.p{
+.pFooter{
     margin-left: 700px;
 }
