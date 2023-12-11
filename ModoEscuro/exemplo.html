@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1,h2,p").addClass("blue");
+                $("div").addClass("important")
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is a another paragraph.</p>
+
+    <div>This is a some important text!</div><br>
+    <button>Add classes to elements</button>
+
+</body>
+
+</html>

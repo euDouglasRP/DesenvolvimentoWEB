@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.important{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.blue{
+    color: blue;
+}
+.texto{
+    margin: 150px 300px;
+    font-size: 23px;
+}
+.dark-mode{
+    background-color: #2e2e2e;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #82B8D9;
+}
+footer{
+    text-align: center;
+    background-color: #82B8D9;
+    bottom: 0;
+    margin-top: 0.5px;
+}
