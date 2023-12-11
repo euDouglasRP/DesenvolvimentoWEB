@@ -14,19 +14,43 @@
         <ul>
             <li><a href="index.html"> Home</a></li>
             <li><a href="complexo.html"> Complexo</a></li>
-            <li><a href="inscricoes.html"> Inscrições</a></li>
+            <li><a href="ranking.html"> Ranking</a></li>
             <li><a href="contato.html"> Contato</a></li>
         </ul>
     </div>
     </header>
 
-        <img src="image/Armagedon_Home.png" alt="" class="imgHome">
+        <div class="slider">
+            <div class="slides">
+
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                
+                <div class="slide first">
+                    <img src="image/Armagedon_Home.png" alt="Armagedon">
+                </div>
+                <div class="slide">
+                    <img src="image/Vestival_Home.png" alt="Festival">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                </div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+            </div>
+
+        </div>
 
     <footer class="footer">
         <img src="image/logo_velopark.png" alt="" class="imgLogo">
         <p class="pFooter">® Desenvolvido Por DougDuAmassa  ©</p>
     </footer>
 
-    
+    <script src="script.js"></script>
 </body>
 </html>

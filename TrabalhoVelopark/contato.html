@@ -14,15 +14,36 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="complexo.html">Complexo</a></li>
-            <li><a href="inscricoes.html">Inscrições</a></li>
+            <li><a href="ranking.html"> Ranking</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </div>
     </header>
 
+
+    <div class="principal-contato">
+        <form id="contact-form">
+            <h2>Area de Contato</h2>
+            <input type="text" id="nome" name="nome" placeholder="Seu Telefone" required>
+            <input type="email" id="email" name="email" placeholder="Seu Email" required>
+            <input type="tel" id="telefone" name="telefone" placeholder="Seu Número de Telefone" required>
+            <select id="estado" name="estado" required>
+                <option value="">Selecione Seu Estado</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="PR">Paraná</option>
+            </select>
+            <input type="text" id="mensagem" name="mensagem" placeholder="Sua Mensagem" required>
+            <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
     <footer class="footer">
         <img src="image/logo_velopark.png" alt="" class="imgLogo">
         <p class="pFooter">® Desenvolvido Por DougDuAmassa  ©</p>
     </footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
