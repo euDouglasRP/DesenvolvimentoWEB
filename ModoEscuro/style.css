@@ -23,6 +23,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #82B8D9;
+    height: 100px;
 }
 footer{
     text-align: center;
